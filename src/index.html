@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" mode="md">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/mode-test.esm.js"></script>
+    <script nomodule src="/build/mode-test.js"></script>
+  </head>
+  <body>
+    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <my-component first="Stencil" last="'Don't call me a framework' JS" mode='ios'></my-component>
+    <div mode='ios' style='border: 1px solid #333; padding: 2px; margin-top: 2px'>
+      <p>
+        Every component in here will be ios if not specified otherwise
+      </p>
+      <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    </div>
+  </body>
+</html>
