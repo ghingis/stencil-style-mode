@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, getMode, Host } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
@@ -30,6 +30,6 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return <Host computed-mode={getMode(this)}><div>Hello, World! I'm {this.getText()}. Applied mode: {getMode(this)}</div></Host>;
   }
 }
